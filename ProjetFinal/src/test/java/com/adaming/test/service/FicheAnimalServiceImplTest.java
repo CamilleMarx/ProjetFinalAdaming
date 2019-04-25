@@ -62,7 +62,13 @@ public class FicheAnimalServiceImplTest {
 	        Integer idAnim = new Integer(1);
 	        ficheAnimalImpl.findById(idAnim);
 	        Mockito.verify(ficheAnimalDao).findById(idAnim);
-	    
+	    }
+	 
+	 @Test
+	    public void should_search_all_when_findAll_is_called() {
+	        LOGGER.info("--------------- Executing should_search_all_when_findAll_is_called test Of FicheAnimalServiceImplTest ---------------");
+	        ficheAnimalImpl.findAll();
+	        Mockito.verify(ficheAnimalDao).findAll();
 	    }
 	    
 	}
