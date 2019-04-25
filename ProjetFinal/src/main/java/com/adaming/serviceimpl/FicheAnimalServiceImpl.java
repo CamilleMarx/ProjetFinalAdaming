@@ -42,7 +42,7 @@ public class FicheAnimalServiceImpl implements IFicheAnimalService{
     @Override
     public FicheAnimal update(FicheAnimal ficheAnimal) {
         // TODO Auto-generated method stub
-        return null;
+        return  ficheAnimalDao.save(ficheAnimal);
     }
 
 
