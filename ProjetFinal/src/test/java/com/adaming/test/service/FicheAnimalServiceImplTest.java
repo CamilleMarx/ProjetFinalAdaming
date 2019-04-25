@@ -55,6 +55,15 @@ public class FicheAnimalServiceImplTest {
 	        ficheAnimalImpl.delete(maFicheAnimal);
 	        Mockito.verify(ficheAnimalDao).delete(maFicheAnimal);
 	    }
+	 
+	 @Test
+	    public void should_search_by_id_when_findById_is_called() {
+	        LOGGER.info("--------------- Executing should_search_by_id_when_findById_is_called test Of FicheAnimalServiceImplTest ---------------");
+	        Integer idAnim = new Integer(1);
+	        ficheAnimalImpl.findById(idAnim);
+	        Mockito.verify(ficheAnimalDao).findById(idAnim);
+	    
+	    }
 	    
 	}
 	
