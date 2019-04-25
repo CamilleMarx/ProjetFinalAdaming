@@ -57,8 +57,9 @@ public class FicheAnimalServiceImpl implements IFicheAnimalService{
 
     @Override
     public FicheAnimal findById(int idAnim) {
+    	Optional<FicheAnimal> ficheAnimal = ficheAnimalDao.findById(idAnim);
+        return  (ficheAnimal == null ? null : ficheAnimal.orElse(null));
        
-        return null;
     }
 
 
