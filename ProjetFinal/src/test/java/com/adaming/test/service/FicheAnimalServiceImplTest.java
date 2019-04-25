@@ -11,14 +11,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.SpringBootRunner;
 import com.adaming.DAO.IFicheAnimalDao;
 import com.adaming.model.FicheAnimal;
 import com.adaming.serviceimpl.FicheAnimalServiceImpl;
 
 
+
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = SpringBootRunner.class)
+@SpringBootTest
 public class FicheAnimalServiceImplTest {
 
 	private FicheAnimalServiceImpl ficheAnimalImpl;
@@ -35,43 +35,13 @@ public class FicheAnimalServiceImplTest {
 	}
 	@Test
 	public void should_add_when_save_is_called() {
-		LOGGER.info("--------------- Executing should_add_when_ajouter_is_called test Of FicheAnimalServiceImplTest ---------------");
-		FicheAnimal maFicheAnimal = new FicheAnimal();
-		ficheAnimalImpl.save(maFicheAnimal);
-		Mockito.verify(ficheAnimalDao).save(maFicheAnimal);
+		 LOGGER.info("--------------- Executing should_add_when_ajouter_is_called test Of FicheAnimalServiceImplTest ---------------");
+	        FicheAnimal maFicheAnimal = new FicheAnimal();
+	        ficheAnimalImpl.save(maFicheAnimal);
+	        Mockito.verify(ficheAnimalDao).save(maFicheAnimal);
+	    }
 	}
 	
-	@Test
-	public void should_update_when_update_is_called() {
-		LOGGER.info("--------------- Executing should_update_when_update_is_called test Of FicheAnimalServiceImplTest ---------------");
-		FicheAnimal maFicheAnimal = new FicheAnimal();
-		ficheAnimalImpl.update(maFicheAnimal);
-		Mockito.verify(ficheAnimalDao).save(maFicheAnimal);
-	}
 	
-	@Test
-	public void should_delete_when_delete_is_called() {
-		LOGGER.info("--------------- Executing should_delete_when_delete_is_called test Of FicheAnimalServiceImplTest ---------------");
-		FicheAnimal maFicheAnimal = new FicheAnimal();
-		ficheAnimalImpl.delete(maFicheAnimal);
-		Mockito.verify(ficheAnimalDao).delete(maFicheAnimal);
 	
-	}
-	
-	@Test
-	public void should_search_by_id_when_findById_is_called() {
-		LOGGER.info("--------------- Executing should_search_by_id_when_findById_is_called test Of FicheAnimalServiceImplTest ---------------");
-		Integer idAnim = new Integer(1);
-		ficheAnimalImpl.findById(idAnim);
-		Mockito.verify(ficheAnimalDao).findById(idAnim);
-	
-	}
-	
-	@Test
-	public void should_search_all_when_findAll_is_called() {
-		LOGGER.info("--------------- Executing should_search_all_when_findAll_is_called test Of FicheAnimalServiceImplTest ---------------");
-		ficheAnimalImpl.findAll();
-		Mockito.verify(ficheAnimalDao).findAll();
-	
-	}
-}
+

@@ -4,6 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
 
 @Entity
 public class FicheAnimal {
@@ -27,6 +30,14 @@ public class FicheAnimal {
 	private String temperament;
 	
 	private String lieuPrefere;
+	
+	@ManyToOne
+	@JoinColumn(name="idAd")
+	private Adherent adherent;
+	
+	@ManyToOne
+	@JoinColumn(name="idAd")
+	private Admin admin;
 
 	public FicheAnimal() {
 		super();
