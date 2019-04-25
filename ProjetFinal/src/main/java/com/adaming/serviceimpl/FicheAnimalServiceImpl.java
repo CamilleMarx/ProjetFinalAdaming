@@ -50,7 +50,7 @@ public class FicheAnimalServiceImpl implements IFicheAnimalService{
     @Override
     public void delete(FicheAnimal ficheAnimal) {
         // TODO Auto-generated method stub
-       
+    	 ficheAnimalDao.delete(ficheAnimal);
     }
 
 
