@@ -35,11 +35,19 @@ public class FicheAnimalServiceImplTest {
 	}
 	@Test
 	public void should_add_when_save_is_called() {
-		 LOGGER.info("--------------- Executing should_add_when_ajouter_is_called test Of FicheAnimalServiceImplTest ---------------");
+		 LOGGER.info("--------------- Executing should_add_when_save_is_called test Of FicheAnimalServiceImplTest ---------------");
 	        FicheAnimal maFicheAnimal = new FicheAnimal();
 	        ficheAnimalImpl.save(maFicheAnimal);
 	        Mockito.verify(ficheAnimalDao).save(maFicheAnimal);
 	    }
+	 @Test
+	    public void should_update_when_update_is_called() {
+	        LOGGER.info("--------------- Executing should_update_when_update_is_called test Of FicheAnimalServiceImplTest ---------------");
+	        FicheAnimal maFicheAnimal = new FicheAnimal();
+	        ficheAnimalImpl.update(maFicheAnimal);
+	        Mockito.verify(ficheAnimalDao).save(maFicheAnimal);
+	    }
+	    
 	}
 	
 	
