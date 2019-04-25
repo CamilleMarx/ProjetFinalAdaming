@@ -47,6 +47,14 @@ public class FicheAnimalServiceImplTest {
 	        ficheAnimalImpl.update(maFicheAnimal);
 	        Mockito.verify(ficheAnimalDao).save(maFicheAnimal);
 	    }
+	 
+	 @Test
+	    public void should_delete_when_delete_is_called() {
+	        LOGGER.info("--------------- Executing should_delete_when_delete_is_called test Of FicheAnimalServiceImplTest ---------------");
+	        FicheAnimal maFicheAnimal = new FicheAnimal();
+	        ficheAnimalImpl.delete(maFicheAnimal);
+	        Mockito.verify(ficheAnimalDao).delete(maFicheAnimal);
+	    }
 	    
 	}
 	
