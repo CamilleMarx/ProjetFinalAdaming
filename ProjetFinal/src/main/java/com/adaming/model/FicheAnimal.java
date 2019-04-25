@@ -36,7 +36,7 @@ public class FicheAnimal {
 	private Adherent adherent;
 	
 	@ManyToOne
-	@JoinColumn(name="idAd")
+	@JoinColumn(name="numAdmin")
 	private Admin admin;
 
 	public FicheAnimal() {
