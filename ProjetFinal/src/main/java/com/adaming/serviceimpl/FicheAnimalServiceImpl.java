@@ -67,7 +67,7 @@ public class FicheAnimalServiceImpl implements IFicheAnimalService{
     @Override
     public List<FicheAnimal> findAll() {
         // TODO Auto-generated method stub
-        return null;
+    	return  ficheAnimalDao.findAll();
     }
 
 }
