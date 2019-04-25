@@ -34,7 +34,7 @@ public class FicheAnimalServiceImpl implements IFicheAnimalService{
 	public FicheAnimal save(FicheAnimal ficheAnimal) {
 		// TODO Auto-generated method stub
 		
-		return null;
+		return ficheAnimalDao.save(ficheAnimal);
 	}
 
 
