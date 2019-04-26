@@ -37,6 +37,8 @@ public class Adherent {
 	
 	private String adresse;
 	
+	private String ville;
+	
 	private int cp;
 	
 	private int age;
@@ -60,14 +62,14 @@ public class Adherent {
 		// TODO Auto-generated constructor stub
 	}
 
-
-	public Adherent(int idAd, String nom, String prenom, String adresse, int cp, int age, String email,
+	public Adherent(int idAd, String nom, String prenom, String adresse, String ville, int cp, int age, String email,
 			String pseudonyme, String mdp) {
 		super();
 		this.idAd = idAd;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.adresse = adresse;
+		this.ville = ville;
 		this.cp = cp;
 		this.age = age;
 		this.email = email;
@@ -75,8 +77,6 @@ public class Adherent {
 		this.mdp = mdp;
 	}
 
-
-	
 
 	public int getIdAd() {
 		return idAd;
@@ -162,6 +162,16 @@ public class Adherent {
 
 	public void setMdp(String mdp) {
 		this.mdp = mdp;
+	}
+
+
+	public String getVille() {
+		return ville;
+	}
+
+
+	public void setVille(String ville) {
+		this.ville = ville;
 	}
 	
 	

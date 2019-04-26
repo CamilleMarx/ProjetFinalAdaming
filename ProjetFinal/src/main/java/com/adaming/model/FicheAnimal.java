@@ -57,6 +57,17 @@ public class FicheAnimal {
 		this.temperament = temperament;
 		this.lieuPrefere = lieuPrefere;
 	}
+	
+	
+
+	public FicheAnimal(int idAnim, String nomAnim, String race, boolean sexe, int age) {
+		super();
+		this.idAnim = idAnim;
+		this.nomAnim = nomAnim;
+		this.race = race;
+		this.sexe = sexe;
+		this.age = age;
+	}
 
 	public int getIdAnim() {
 		return idAnim;

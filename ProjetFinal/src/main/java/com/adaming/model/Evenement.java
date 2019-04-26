@@ -33,7 +33,7 @@ public class Evenement {
 	private List<Adherent> adherent = new ArrayList<Adherent>();
 	
 	@ManyToOne
-	@JoinColumn(name="idAd")
+	@JoinColumn(name="numAdmin")
 	private Admin admin;
 	
 	public Evenement() {

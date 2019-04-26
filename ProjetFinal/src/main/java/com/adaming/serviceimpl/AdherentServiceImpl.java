@@ -1,6 +1,7 @@
 package com.adaming.serviceimpl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,7 @@ import com.adaming.service.IAdherentService;
 public class AdherentServiceImpl implements IAdherentService{
 
 	@Autowired
-	IAdherentDao adherentdao;
+	IAdherentDao adherentDao;
 	
 	
 	public AdherentServiceImpl() {
@@ -21,9 +22,9 @@ public class AdherentServiceImpl implements IAdherentService{
 		// TODO Auto-generated constructor stub	
 	}
 
-	public AdherentServiceImpl(IAdherentDao adherentdao) {
+	public AdherentServiceImpl(IAdherentDao adherentDao) {
 		super();
-		this.adherentdao = adherentdao;
+		this.adherentDao = adherentDao;
 	}
 	
 
@@ -31,31 +32,33 @@ public class AdherentServiceImpl implements IAdherentService{
 	public Adherent save(Adherent adherent) {
 		// TODO Auto-generated method stub
 		
-		return null;
+		return adherentDao.save(adherent);
 	}
 
 	@Override
 	public Adherent update(Adherent adherent) {
 		// TODO Auto-generated method stub
-		return null;
+		return adherentDao.save(adherent);
 	}
 
 	@Override
 	public void delete(Adherent adherent) {
 		// TODO Auto-generated method stub
+		adherentDao.delete(adherent);
 		
 	}
 
 	@Override
 	public Adherent findById(int idAd) {
 		// TODO Auto-generated method stub
-		return null;
+		Optional<Adherent> adherent = adherentDao.findById(idAd);
+		return (adherent == null ? null : adherent.orElse(null));
 	}
 
 	@Override
 	public List<Adherent> findAll() {
 		// TODO Auto-generated method stub
-		return null;
+		return adherentDao.findAll();
 	}
 
 }

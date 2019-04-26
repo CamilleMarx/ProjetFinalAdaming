@@ -1,6 +1,7 @@
 package com.adaming.serviceimpl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,31 +31,32 @@ public class EvenementServiceImpl implements IEvenementService{
 	@Override
 	public Evenement save(Evenement evenement) {
 		// TODO Auto-generated method stub
-		return null;
+		return evenementDao.save(evenement);
 	}
 
 	@Override
 	public Evenement update(Evenement evenement) {
 		// TODO Auto-generated method stub
-		return null;
+		return evenementDao.save(evenement);
 	}
 
 	@Override
 	public void delete(Evenement evenement) {
 		// TODO Auto-generated method stub
-		
+		evenementDao.delete(evenement);
 	}
 
 	@Override
 	public Evenement findById(int idEvent) {
 		// TODO Auto-generated method stub
-		return null;
+		Optional<Evenement> evenement = evenementDao.findById(idEvent);
+		return (evenement == null ? null : evenement.orElse(null));
 	}
 
 	@Override
 	public List<Evenement> findAll() {
 		// TODO Auto-generated method stub
-		return null;
+		return evenementDao.findAll();
 	}
 
 }

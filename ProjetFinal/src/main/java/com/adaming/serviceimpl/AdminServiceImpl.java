@@ -1,6 +1,7 @@
 package com.adaming.serviceimpl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,31 +33,32 @@ public class AdminServiceImpl implements IAdminService{
 	@Override
 	public Admin save(Admin admin) {
 		// TODO Auto-generated method stub
-		return null;
+		return adminDao.save(admin);
 	}
 
 	@Override
 	public Admin update(Admin admin) {
 		// TODO Auto-generated method stub
-		return null;
+		return adminDao.save(admin);
 	}
 
 	@Override
 	public void delete(Admin admin) {
 		// TODO Auto-generated method stub
-		
+		adminDao.delete(admin);
 	}
 
 	@Override
 	public Admin findById(int numAdmin) {
 		// TODO Auto-generated method stub
-		return null;
+		Optional<Admin> admin = adminDao.findById(numAdmin);
+		return (admin == null ? null : admin.orElse(null));
 	}
 
 	@Override
 	public List<Admin> findAll() {
 		// TODO Auto-generated method stub
-		return null;
+		return adminDao.findAll();
 	}
 
 }
