@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.adaming.model.FicheAnimal;
 import com.adaming.service.IFicheAnimalService;
+import com.adaming.serviceimpl.FicheAnimalServiceImpl;
+
 
 
 @RestController
@@ -27,6 +29,8 @@ public class FicheAnimalController {
 	IFicheAnimalService ficheAnimalService;
 	
 	
+
+
 	@PostMapping(value = "/ajoutAnim", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public FicheAnimal save(@RequestBody FicheAnimal ficheAnimal) {
 		System.out.println(ficheAnimal.getNomAnim());
