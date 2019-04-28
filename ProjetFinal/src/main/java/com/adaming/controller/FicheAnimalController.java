@@ -16,8 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.adaming.model.FicheAnimal;
 import com.adaming.service.IFicheAnimalService;
-import com.adaming.serviceimpl.FicheAnimalServiceImpl;
-
 
 
 @RestController
@@ -28,7 +26,17 @@ public class FicheAnimalController {
 	@Autowired
 	IFicheAnimalService ficheAnimalService;
 	
+		
+	public FicheAnimalController() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	
+	
+	public FicheAnimalController(IFicheAnimalService ficheAnimalService) {
+		super();
+		this.ficheAnimalService = ficheAnimalService;
+	}
 
 
 	@PostMapping(value = "/ajoutAnim", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -38,7 +46,7 @@ public class FicheAnimalController {
 		}
 	
 	
-	@PutMapping("/{idAnim}")
+	@PutMapping(value = "/{idAnim}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public FicheAnimal update(@RequestBody FicheAnimal ficheAnimal, @PathVariable int idAnim) {
 		if (ficheAnimalService.findById(idAnim) == null) {
 			return null;
@@ -48,19 +56,19 @@ public class FicheAnimalController {
 		}	
 	}
 	
-	@DeleteMapping("/{idAnim}")
+	@DeleteMapping(value = "/{idAnim}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public void delete(@PathVariable int idAnim) {
 		if (ficheAnimalService.findById(idAnim) != null) {
 			ficheAnimalService.delete(ficheAnimalService.findById(idAnim));
 		}
 	}
 	
-	@GetMapping(value = "/{idAnim}")
+	@GetMapping(value = "/{idAnim}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public FicheAnimal findById(@PathVariable int idAnim) {
 		return ficheAnimalService.findById(idAnim);
 	}
 	
-	@GetMapping(value = "/all")
+	@GetMapping(value = "/all", produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<FicheAnimal> findAll() {
 		return ficheAnimalService.findAll();
 	}

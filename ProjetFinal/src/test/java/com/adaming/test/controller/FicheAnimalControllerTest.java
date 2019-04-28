@@ -186,8 +186,6 @@ public class FicheAnimalControllerTest {
     		int status = mvcResult.getResponse().getStatus();
     		LOGGER.info("--------Verifying HTTP Status -------");
     		assertEquals(200, status);
-    		LOGGER.info("--------Getting HTTP Response -------");
-    		String content = mvcResult.getResponse().getContentAsString();
     		LOGGER.info("----------Searching for Utilisateur-----------");
             FicheAnimal ficheAnimalFound = ficheAnimalService.findById(maFicheAnimal.getIdAnim());
             LOGGER.info("----------Verifying utilisateur-----------");
