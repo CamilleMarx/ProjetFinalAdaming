@@ -26,7 +26,7 @@ public class AdminController {
 	IAdminService adminService;
 	
 	
-	@PostMapping(value = "/ajoutAnim", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(value = "/ajoutAdmin", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public Admin save(@RequestBody Admin admin) {
 			return this.adminService.save(admin);
 		}

@@ -27,18 +27,18 @@ public class EvenementController {
 	
 	
 	@PostMapping(value = "/ajoutEven", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public Evenement save(@RequestBody Evenement evnement) {
-		return this.evenementService.save(evnement);
+	public Evenement save(@RequestBody Evenement evenement) {
+		return this.evenementService.save(evenement);
 		}
 	
 	
 	@PutMapping(value = "/{idEven}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public Evenement update(@RequestBody Evenement evnement, @PathVariable int idEven) {
+	public Evenement update(@RequestBody Evenement evenement, @PathVariable int idEven) {
 		if (evenementService.findById(idEven) == null) {
 			return null;
 		}
 		else {
-			return evenementService.save(evnement);
+			return evenementService.save(evenement);
 		}	
 	}
 	
