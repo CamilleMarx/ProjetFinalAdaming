@@ -18,5 +18,11 @@ public interface IFicheAnimalService {
 	
 	public List<FicheAnimal> findAll();
 
+	public List<FicheAnimal> findByRaceNName(String race, String name);
+
+	public List<FicheAnimal> findByRaceAndSexeAndLieuPrefere(String race, boolean sexe, String lieuPrefere);
+
+	public List<FicheAnimal> findByRaceAndSexe(String race, boolean sexe);
+
 }
 

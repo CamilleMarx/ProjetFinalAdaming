@@ -27,7 +27,7 @@ public class FicheAnimal {
 	
 	private String humeur;
 	
-	private String temperament;
+	private String description;
 	
 	private String lieuPrefere;
 	
@@ -45,7 +45,7 @@ public class FicheAnimal {
 	}
 
 	public FicheAnimal(int idAnim, String nomAnim, String race, boolean sexe, int age, String personnalite,
-			String humeur, String temperament, String lieuPrefere) {
+			String humeur, String description, String lieuPrefere) {
 		super();
 		this.idAnim = idAnim;
 		this.nomAnim = nomAnim;
@@ -54,7 +54,7 @@ public class FicheAnimal {
 		this.age = age;
 		this.personnalite = personnalite;
 		this.humeur = humeur;
-		this.temperament = temperament;
+		this.description = description;
 		this.lieuPrefere = lieuPrefere;
 	}
 	
@@ -125,12 +125,12 @@ public class FicheAnimal {
 		this.humeur = humeur;
 	}
 
-	public String getTemperament() {
-		return temperament;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setTemperament(String temperament) {
-		this.temperament = temperament;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public String getLieuPrefere() {

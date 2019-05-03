@@ -70,6 +70,23 @@ public class FicheAnimalServiceImpl implements IFicheAnimalService{
     	return  ficheAnimalDao.findAll();
     }
 
+
+
+	@Override
+	public List<FicheAnimal> findByRaceNName(String race, String name) {
+		return this.ficheAnimalDao.findByRaceAndNomAnim(race, name);
+	}
+
+	@Override
+	public List<FicheAnimal> findByRaceAndSexeAndLieuPrefere(String race, boolean sexe, String lieuPrefere) {
+		return this.ficheAnimalDao.findByRaceAndSexeAndLieuPrefere(race, sexe, lieuPrefere);
+	}
+
+	@Override
+	public List<FicheAnimal> findByRaceAndSexe(String race, boolean sexe) {
+		return this.ficheAnimalDao.findByRaceAndSexe(race, sexe);
+	}
+
 }
 
 

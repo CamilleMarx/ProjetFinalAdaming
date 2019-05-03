@@ -72,5 +72,24 @@ public class FicheAnimalController {
 	public List<FicheAnimal> findAll() {
 		return ficheAnimalService.findAll();
 	}
+	
+	@GetMapping(value = "/findByRaceName/{race}/{name}" , produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<FicheAnimal> findByRaceNName(@PathVariable String race, @PathVariable String name){
+		return ficheAnimalService.findByRaceNName( race,  name);
+	}
 
+	@GetMapping(value = "/findByRaceSexeLieuPrefere/{race}/{sexe}/{lieuPrefere}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<FicheAnimal> findByRaceAndSexeAndLieuPrefere(@PathVariable String race, @PathVariable Boolean sexe, @PathVariable String lieuPrefere) {
+		if (race != null && sexe != null && lieuPrefere != "null") {
+			return ficheAnimalService.findByRaceAndSexeAndLieuPrefere(race, sexe, lieuPrefere);
+		}
+//		else if (race != null && sexe != null) {
+		if (lieuPrefere.equals("null")) {
+			return ficheAnimalService.findByRaceAndSexe(race, sexe);
+		}
+		else {
+			return null;
+		}
+	}
+	
 }
