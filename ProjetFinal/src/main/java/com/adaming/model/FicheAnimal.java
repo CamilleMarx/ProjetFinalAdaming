@@ -60,6 +60,22 @@ public class FicheAnimal {
 	
 	
 
+	public FicheAnimal(int idAnim, String nomAnim, String race, boolean sexe, int age, String personnalite,
+			String humeur, String description, String lieuPrefere, Adherent adherent, Admin admin) {
+		super();
+		this.idAnim = idAnim;
+		this.nomAnim = nomAnim;
+		this.race = race;
+		this.sexe = sexe;
+		this.age = age;
+		this.personnalite = personnalite;
+		this.humeur = humeur;
+		this.description = description;
+		this.lieuPrefere = lieuPrefere;
+		this.adherent = adherent;
+		this.admin = admin;
+	}
+
 	public FicheAnimal(int idAnim, String nomAnim, String race, boolean sexe, int age) {
 		super();
 		this.idAnim = idAnim;
@@ -139,6 +155,22 @@ public class FicheAnimal {
 
 	public void setLieuPrefere(String lieuPrefere) {
 		this.lieuPrefere = lieuPrefere;
+	}
+
+	public Adherent getAdherent() {
+		return adherent;
+	}
+
+	public void setAdherent(Adherent adherent) {
+		this.adherent = adherent;
+	}
+
+	public Admin getAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(Admin admin) {
+		this.admin = admin;
 	}
 	
 	

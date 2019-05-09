@@ -19,7 +19,7 @@ import com.adaming.service.IAdherentService;
 
 @RestController
 @RequestMapping("/adherent")
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:4200")
 public class AdherentController {
 	
 	@Autowired

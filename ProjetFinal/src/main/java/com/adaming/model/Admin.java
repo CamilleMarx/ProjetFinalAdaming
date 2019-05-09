@@ -39,6 +39,23 @@ public class Admin extends Adherent{
 	public void setNumAdmin(int numAdmin) {
 		this.numAdmin = numAdmin;
 	}
+
+	public List<FicheAnimal> getFichesAnimal() {
+		return fichesAnimal;
+	}
+
+	public void setFichesAnimal(List<FicheAnimal> fichesAnimal) {
+		this.fichesAnimal = fichesAnimal;
+	}
+
+	public List<Evenement> getEvenement() {
+		return evenement;
+	}
+
+	public void setEvenement(List<Evenement> evenement) {
+		this.evenement = evenement;
+	}
+	
 	
 	
 }

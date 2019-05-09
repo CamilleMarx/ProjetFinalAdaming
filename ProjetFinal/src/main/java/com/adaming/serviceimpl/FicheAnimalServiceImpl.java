@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.adaming.DAO.IFicheAnimalDao;
+import com.adaming.model.Adherent;
 import com.adaming.model.FicheAnimal;
 import com.adaming.service.IFicheAnimalService;
 
@@ -73,18 +74,9 @@ public class FicheAnimalServiceImpl implements IFicheAnimalService{
 
 
 	@Override
-	public List<FicheAnimal> findByRaceNName(String race, String name) {
-		return this.ficheAnimalDao.findByRaceAndNomAnim(race, name);
-	}
-
-	@Override
-	public List<FicheAnimal> findByRaceAndSexeAndLieuPrefere(String race, boolean sexe, String lieuPrefere) {
-		return this.ficheAnimalDao.findByRaceAndSexeAndLieuPrefere(race, sexe, lieuPrefere);
-	}
-
-	@Override
-	public List<FicheAnimal> findByRaceAndSexe(String race, boolean sexe) {
-		return this.ficheAnimalDao.findByRaceAndSexe(race, sexe);
+	public List<FicheAnimal> findByAdherent(Adherent adherent) {
+		// TODO Auto-generated method stub
+		return this.ficheAnimalDao.findByAdherent(adherent);
 	}
 
 }

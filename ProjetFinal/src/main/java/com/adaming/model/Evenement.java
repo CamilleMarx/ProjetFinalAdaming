@@ -89,6 +89,22 @@ public class Evenement {
 	public void setLieu(String lieu) {
 		this.lieu = lieu;
 	}
+
+	public List<Adherent> getAdherent() {
+		return adherent;
+	}
+
+	public void setAdherent(List<Adherent> adherent) {
+		this.adherent = adherent;
+	}
+
+	public Admin getAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(Admin admin) {
+		this.admin = admin;
+	}
 	
 	
 

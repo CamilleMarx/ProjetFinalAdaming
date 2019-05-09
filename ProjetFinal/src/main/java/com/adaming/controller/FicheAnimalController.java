@@ -14,13 +14,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.adaming.model.Adherent;
 import com.adaming.model.FicheAnimal;
 import com.adaming.service.IFicheAnimalService;
 
 
 @RestController
 @RequestMapping("/ficheAnimal")
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:4200")
 public class FicheAnimalController {
 	
 	@Autowired
@@ -72,24 +73,11 @@ public class FicheAnimalController {
 	public List<FicheAnimal> findAll() {
 		return ficheAnimalService.findAll();
 	}
-	
-	@GetMapping(value = "/findByRaceName/{race}/{name}" , produces = MediaType.APPLICATION_JSON_VALUE)
-	public List<FicheAnimal> findByRaceNName(@PathVariable String race, @PathVariable String name){
-		return ficheAnimalService.findByRaceNName( race,  name);
-	}
 
-	@GetMapping(value = "/findByRaceSexeLieuPrefere/{race}/{sexe}/{lieuPrefere}", produces = MediaType.APPLICATION_JSON_VALUE)
-	public List<FicheAnimal> findByRaceAndSexeAndLieuPrefere(@PathVariable String race, @PathVariable Boolean sexe, @PathVariable String lieuPrefere) {
-		if (race != null && sexe != null && lieuPrefere != "null") {
-			return ficheAnimalService.findByRaceAndSexeAndLieuPrefere(race, sexe, lieuPrefere);
-		}
-//		else if (race != null && sexe != null) {
-		if (lieuPrefere.equals("null")) {
-			return ficheAnimalService.findByRaceAndSexe(race, sexe);
-		}
-		else {
-			return null;
-		}
+	@GetMapping(value= "/all/{adherent}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<FicheAnimal> findByAdherent(@PathVariable Adherent adherent) {
+		return ficheAnimalService.findByAdherent(adherent);
 	}
+    
 	
 }

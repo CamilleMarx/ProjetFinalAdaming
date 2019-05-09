@@ -19,7 +19,7 @@ import com.adaming.service.IEvenementService;
 
 @RestController
 @RequestMapping("/evenement")
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:4200")
 public class EvenementController {
 	
 	@Autowired
