@@ -39,7 +39,7 @@ public class FicheAnimalController {
 		this.ficheAnimalService = ficheAnimalService;
 	}
 
-
+	
 	@PostMapping(value = "/ajoutAnim", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public FicheAnimal save(@RequestBody FicheAnimal ficheAnimal) {
 		System.out.println(ficheAnimal.getNomAnim());

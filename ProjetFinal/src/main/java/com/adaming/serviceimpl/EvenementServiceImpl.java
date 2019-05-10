@@ -29,24 +29,44 @@ public class EvenementServiceImpl implements IEvenementService{
 	}
 
 	@Override
+	/**Methode permettant de sauvegarder un objet Evenement
+	 * 
+	 * @param Evenement
+	 * @return save de evenementDao
+	 */
 	public Evenement save(Evenement evenement) {
 		// TODO Auto-generated method stub
 		return evenementDao.save(evenement);
 	}
 
 	@Override
+	/**Methode permettant de modifier un objet Evenement
+	 * 
+	 * @param Evenement
+	 * @return save de evenementDao
+	 */
 	public Evenement update(Evenement evenement) {
 		// TODO Auto-generated method stub
 		return evenementDao.save(evenement);
 	}
 
 	@Override
+	/**Methode permettant de supprimer un objet Evenement
+	 * 
+	 * @param Evenement
+	 * @return save de evenementDao
+	 */
 	public void delete(Evenement evenement) {
 		// TODO Auto-generated method stub
 		evenementDao.delete(evenement);
 	}
 
 	@Override
+	/**Methode permettant de récupérer un objet Evenement
+	 * 
+	 * @param idEvent
+	 * @return findById de evenementDao
+	 */
 	public Evenement findById(int idEvent) {
 		// TODO Auto-generated method stub
 		Optional<Evenement> evenement = evenementDao.findById(idEvent);
@@ -54,6 +74,10 @@ public class EvenementServiceImpl implements IEvenementService{
 	}
 
 	@Override
+	/**Methode permettant d'afficher tous les objets Evenement
+	 * 
+	 * @return findAll de evenementDao
+	 */
 	public List<Evenement> findAll() {
 		// TODO Auto-generated method stub
 		return evenementDao.findAll();

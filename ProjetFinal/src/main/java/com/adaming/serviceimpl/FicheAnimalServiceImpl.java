@@ -33,6 +33,11 @@ public class FicheAnimalServiceImpl implements IFicheAnimalService{
 
 
 	@Override
+	/**Methode permettant de sauvegarder un objet FicheAnimal
+	 * 
+	 * @param FicheAnimal
+	 * @return save de ficheAnimalDao
+	 */
     public FicheAnimal save(FicheAnimal ficheAnimal) {
         // TODO Auto-generated method stub
         return  ficheAnimalDao.save(ficheAnimal);

@@ -77,7 +77,7 @@ public class Adherent {
 		this.mdp = mdp;
 	}
 
-
+	
 	public int getIdAd() {
 		return idAd;
 	}
@@ -174,21 +174,6 @@ public class Adherent {
 		this.ville = ville;
 	}
 
-	public List<Evenement> getEvenements() {
-		return evenements;
-	}
-
-	public void setEvenements(List<Evenement> evenements) {
-		this.evenements = evenements;
-	}
-
-	public List<FicheAnimal> getFichesAnimal() {
-		return fichesAnimal;
-	}
-
-	public void setFichesAnimal(List<FicheAnimal> fichesAnimal) {
-		this.fichesAnimal = fichesAnimal;
-	}
 	
 	
 	

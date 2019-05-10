@@ -22,6 +22,7 @@ public class Admin extends Adherent{
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="admin", fetch=FetchType.LAZY)
 	List<Evenement> evenement = new ArrayList<Evenement>();
 
+	
 	public Admin() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -32,6 +33,7 @@ public class Admin extends Adherent{
 		this.numAdmin = numAdmin;
 	}
 
+	
 	public int getNumAdmin() {
 		return numAdmin;
 	}
@@ -40,21 +42,7 @@ public class Admin extends Adherent{
 		this.numAdmin = numAdmin;
 	}
 
-	public List<FicheAnimal> getFichesAnimal() {
-		return fichesAnimal;
-	}
-
-	public void setFichesAnimal(List<FicheAnimal> fichesAnimal) {
-		this.fichesAnimal = fichesAnimal;
-	}
-
-	public List<Evenement> getEvenement() {
-		return evenement;
-	}
-
-	public void setEvenement(List<Evenement> evenement) {
-		this.evenement = evenement;
-	}
+	
 	
 	
 	

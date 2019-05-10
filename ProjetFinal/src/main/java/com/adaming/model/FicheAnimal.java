@@ -39,6 +39,7 @@ public class FicheAnimal {
 	@JoinColumn(name="numAdmin")
 	private Admin admin;
 
+	
 	public FicheAnimal() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -85,6 +86,7 @@ public class FicheAnimal {
 		this.age = age;
 	}
 
+	
 	public int getIdAnim() {
 		return idAnim;
 	}
@@ -163,14 +165,6 @@ public class FicheAnimal {
 
 	public void setAdherent(Adherent adherent) {
 		this.adherent = adherent;
-	}
-
-	public Admin getAdmin() {
-		return admin;
-	}
-
-	public void setAdmin(Admin admin) {
-		this.admin = admin;
 	}
 	
 	

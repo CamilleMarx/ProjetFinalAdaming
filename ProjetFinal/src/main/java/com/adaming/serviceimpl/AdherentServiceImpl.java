@@ -29,6 +29,11 @@ public class AdherentServiceImpl implements IAdherentService{
 	
 
 	@Override
+	/**Methode permettant de sauvegarder un objet Adherent
+	 * 
+	 * @param Adherent
+	 * @return save de adherentDao
+	 */
 	public Adherent save(Adherent adherent) {
 		// TODO Auto-generated method stub
 		
@@ -36,12 +41,21 @@ public class AdherentServiceImpl implements IAdherentService{
 	}
 
 	@Override
+	/**Methode permettant de modifier un objet Adherent
+	 * 
+	 * @param Adherent
+	 * @return save de adherentDao
+	 */
 	public Adherent update(Adherent adherent) {
 		// TODO Auto-generated method stub
 		return adherentDao.save(adherent);
 	}
 
 	@Override
+	/**Methode permettant de supprimer un objet Adherent
+	 * 
+	 * @param Adherent
+	 */
 	public void delete(Adherent adherent) {
 		// TODO Auto-generated method stub
 		adherentDao.delete(adherent);
@@ -49,6 +63,11 @@ public class AdherentServiceImpl implements IAdherentService{
 	}
 
 	@Override
+	/**Methode permettant de récupérer un objet Adherent suivant son id
+	 * 
+	 * @paramidAd
+	 * @return findById de adherentDao
+	 */
 	public Adherent findById(int idAd) {
 		// TODO Auto-generated method stub
 		Optional<Adherent> adherent = adherentDao.findById(idAd);
@@ -56,6 +75,10 @@ public class AdherentServiceImpl implements IAdherentService{
 	}
 
 	@Override
+	/**Methode permettant d'afficher tous les objets adherent
+	 * 
+	 * @return findAll de adherentDao
+	 */
 	public List<Adherent> findAll() {
 		// TODO Auto-generated method stub
 		return adherentDao.findAll();

@@ -36,6 +36,7 @@ public class Evenement {
 	@JoinColumn(name="numAdmin")
 	private Admin admin;
 	
+	
 	public Evenement() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -50,6 +51,7 @@ public class Evenement {
 		this.lieu = lieu;
 	}
 
+	
 	public int getIdEvent() {
 		return idEvent;
 	}
@@ -90,21 +92,7 @@ public class Evenement {
 		this.lieu = lieu;
 	}
 
-	public List<Adherent> getAdherent() {
-		return adherent;
-	}
-
-	public void setAdherent(List<Adherent> adherent) {
-		this.adherent = adherent;
-	}
-
-	public Admin getAdmin() {
-		return admin;
-	}
-
-	public void setAdmin(Admin admin) {
-		this.admin = admin;
-	}
+	
 	
 	
 
